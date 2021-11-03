@@ -10,7 +10,7 @@ function App() {
     return JSON.parse(localStorage.getItem("contacts")) ?? [];
   });
 
-  const [filter, setFilter] = useState([]);
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     window.localStorage.setItem("contacts", JSON.stringify(contacts));
@@ -48,8 +48,8 @@ function App() {
     );
   };
 
-  const removeContact = (id) => {
-    setContacts(contacts.filter((elem) => elem.id !== id));
+  const removeContact = (e) => {
+    setContacts(contacts.filter((elem) => elem.id !== e.target.id));
   };
 
   return (

@@ -16,6 +16,6 @@ export default function Filter({ value, changeFilter }) {
 }
 
 Filter.propTypes = {
-  value: PropTypes.array,
+  value: PropTypes.string,
   changeFilter: PropTypes.func,
 };
